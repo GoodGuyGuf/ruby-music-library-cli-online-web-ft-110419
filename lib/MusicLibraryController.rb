@@ -71,7 +71,7 @@ class MusicLibraryController
     list_songs = Song.all.sort{ |a, b| a.name <=> b.name }
     input = " "
     input = gets.to_i
-
+binding.pry
       puts "Playing #{song.name} by #{song.artist.name}"
     end
     #if (1..Song.all.length).include?(input)
