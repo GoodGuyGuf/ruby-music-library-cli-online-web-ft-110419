@@ -76,7 +76,6 @@ class MusicLibraryController
       if song == false
         nil
       else
-        
       puts "Playing #{song.name} by #{song.artist.name}"
     #  binding.pry
     end
