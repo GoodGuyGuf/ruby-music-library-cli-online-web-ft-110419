@@ -25,7 +25,9 @@ class MusicLibraryController
     end
   end
 
-  
+  case gets
+  when 'list_songs'
+    list_songs
 
   def list_songs
     listed_songs = Song.all.collect.sort_by{|song| song.name}
