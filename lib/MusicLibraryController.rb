@@ -71,10 +71,11 @@ class MusicLibraryController
     list_songs = Song.all.sort{ |a, b| a.name <=> b.name }
     input = " "
     input = gets.to_i
-    if (1..Song.all.length).include?(input)
-      song = list_songs[input+2]
+    if input <= Song.all.size && input > 0
+       song = Song.all.sort_by(&:name)[input - 1]
       puts "Playing #{song.name} by #{song.artist.name}"
     end
+  end
     #if (1..Song.all.length).include?(input)
     #  song = list_songs[input+2]
 end
