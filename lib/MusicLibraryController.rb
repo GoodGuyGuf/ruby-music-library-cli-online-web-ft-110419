@@ -39,7 +39,7 @@ class MusicLibraryController
 
     listed_genres = Genre.all.collect{|genre| genre.name}
     listed_genres.each_with_index{|song, index| puts "#{index+1}. #{genre.name}"}
-  
+
   end
 
   def list_songs_by_artist
